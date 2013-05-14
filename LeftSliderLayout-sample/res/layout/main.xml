@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include android:id="@+id/main_layout_below" layout="@layout/main_layout_below" />
+
+    <com.zhaoxufeng.leftsliderlayout.lib.LeftSliderLayout
+        android:id="@+id/main_slider_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        
+        <!-- Shadow Child -->
+        <ImageView
+            android:layout_width="15px"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_side_shadow" />
+        
+        <!-- Main Child -->
+        <include android:id="@+id/main_slider_main" layout="@layout/main_layout_above" />
+        
+    </com.zhaoxufeng.leftsliderlayout.lib.LeftSliderLayout>
+</FrameLayout>
